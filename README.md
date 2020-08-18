@@ -46,3 +46,5 @@ Trigger every 5 minutes, replace with path to python3 and script location where 
 ## Notes
 
 This will send your live node metric to panda-bot every 5 minutes, please do not increase the frequency as it will be rejected
+
+If you'd like extra metrics to be monitored please [contact us via Discord](https://discord.gg/Hs57Jg4) and make a Pull Request
