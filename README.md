@@ -2,9 +2,6 @@
 
 Requires python3.6+
 
-## Install depdencies
-
-python3 -m pip install -r requirements.txt
 
 ## Git clone and update script
 
@@ -12,6 +9,7 @@ python3 -m pip install -r requirements.txt
 cd ~
 git clone https://github.com/fat-panda-club/info-node.git
 cd info-node
+python3 -m pip install -r requirements.txt
 vi panda_info_node.py
 ```
 
