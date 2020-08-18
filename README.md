@@ -9,11 +9,13 @@ python3 -m pip install -r requirements.txt
 ## Git clone and update script
 
 ```
-cd /home/user/
+cd ~
 git clone https://github.com/fat-panda-club/info-node.git
 cd info-node
 vi panda_info_node.py
 ```
+
+Insert values as follows:
 
 | Attribute  | Description |
 | ------------- | ------------- |
@@ -23,6 +25,7 @@ vi panda_info_node.py
 | INFO_NODE_PORT | Port number of the live node |
 | INFO_NODE_RPC_USERNAME | RPC User of the live node |
 | INFO_NODE_RPC_PASSWORD | RPC Password of the live node |
+
 
 The RPC settings are generally set in the daemon config similarly to below:
 
@@ -39,7 +42,7 @@ rpcallowip=1.2.3.4/32
 
 Trigger every 5 minutes, replace with path to python3 and script location where applicable
 
-`*/5 * * * * /usr/bin/python3 /home/user/info-node/panda_info_node.py`
+`*/5 * * * * /usr/bin/python3 ~/info-node/panda_info_node.py`
 
 
 ## Notes
