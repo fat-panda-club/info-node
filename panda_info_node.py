@@ -44,7 +44,7 @@ url = "https://api.fatpanda.club/stat/%s" % CURRENCY_TICKER.lower()
 headers = {
     'x-api-key': FAT_PANDA_CLUB_API_KEY,
     'content-type': "application/json",
-    'user-agent': "panda-minion"
+    'user-agent': "panda-info-node-%s" % CURRENCY_TICKER.lower()
     }
 
 response = requests.request("POST", url, headers=headers, json=stats)
