@@ -37,6 +37,7 @@ rpcport=123
 rpcallowip=1.2.3.4/32 
 
 ```
+This IP is the host/VM which will be running the info-node script
 
 ## Create crontask 
 
