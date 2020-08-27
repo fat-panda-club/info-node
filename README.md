@@ -53,6 +53,6 @@ Keep this node updated and in sync to ensure the correct stats are presented by 
 
 ## Notes
 
-This will send your live node metric to panda-bot every 5 minutes, please do not increase the frequency as it will be rejected
+The script will send your live node metric to panda-bot on average every 5 minutes, please do not increase the frequency as it will be rejected
 
 If you'd like extra metrics to be monitored please [contact us via Discord](https://discord.gg/Hs57Jg4) and make a Pull Request
