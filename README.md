@@ -4,7 +4,7 @@ Requires python3.7+
 
 ## Retrieve API key from panda-bot
 
-Run $register command in DM or any channel with panda-bot present
+Run $infonode command in DM or any channel with panda-bot present
 
 ## Git clone and update script
 
