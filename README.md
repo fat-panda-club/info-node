@@ -42,7 +42,8 @@ rpcallowip=1.2.3.4/32
 
 Trigger every 5 minutes, replace with path to python3 and script location where applicable
 
-`*/5 * * * * /usr/bin/python3 ~/info-node/panda_info_node.py`
+`*/5 * * * * /usr/bin/python3 ~/info-node/panda_info_node.py >> ~/panda_info_node.log 2>&1`
+
 
 ## Set up info node 
 
