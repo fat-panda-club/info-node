@@ -2,6 +2,9 @@
 
 Requires python3.6+
 
+## Retrieve API key from panda-bot
+
+Run $register command in DM or any channel with panda-bot present
 
 ## Git clone and update script
 
@@ -35,12 +38,16 @@ rpcallowip=1.2.3.4/32
 
 ```
 
-
 ## Create crontask 
 
 Trigger every 5 minutes, replace with path to python3 and script location where applicable
 
 `*/5 * * * * /usr/bin/python3 ~/info-node/panda_info_node.py`
+
+## Set up info node 
+
+Set up your blockchain node on the same or an alternate VPS with the configuration from above steps
+Keep this node updated and in sync to ensure the correct stats are presented by panda-bot
 
 
 ## Notes
