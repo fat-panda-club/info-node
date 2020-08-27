@@ -1,5 +1,7 @@
+import random
+import time
 import requests
-from bitcoinrpc.authproxy import AuthServiceProxy, JSONRPCException
+from bitcoinrpc.authproxy import AuthServiceProxy
 
 # This is the currency which you received API key for
 CURRENCY_TICKER = ""
@@ -18,6 +20,11 @@ stats = {
     'peers': []
 }
 
+# Randomize start time, do not remove or you will be rate limited!
+sleep_time = random.randint(1, 299)
+print("Sleeping for %s seconds..." % sleep_time)
+time.sleep(sleep_time)
+
 # On failure check VPS is able to access target node and RPC credentials are correct
 connection = AuthServiceProxy("http://%s:%s@%s:%s" % \
     ( INFO_NODE_RPC_USERNAME, INFO_NODE_RPC_PASSWORD, INFO_NODE_HOST, INFO_NODE_PORT) )
@@ -26,8 +33,8 @@ connection = AuthServiceProxy("http://%s:%s@%s:%s" % \
 # Accepted metrics are [ 'version', 'protocolversion', 'walletversion', 'blocks' ]
 # Get in touch with us to expand the metrics list
 getinfo = connection.getinfo()
-#getinfo = connection.getblockchaininfo()
-#getinfo = connection.getwalletinfo()
+#blockchaininfo = connection.getblockchaininfo()
+#walletinfo = connection.getwalletinfo()
 stats['version'] = getinfo['version']
 stats['protocolversion'] = getinfo['protocolversion']
 stats['walletversion'] = getinfo['walletversion']
