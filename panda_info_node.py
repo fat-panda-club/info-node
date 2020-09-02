@@ -27,14 +27,19 @@ time.sleep(sleep_time)
 
 # On failure check VPS is able to access target node and RPC credentials are correct
 connection = AuthServiceProxy("http://%s:%s@%s:%s" % \
-    ( INFO_NODE_RPC_USERNAME, INFO_NODE_RPC_PASSWORD, INFO_NODE_HOST, INFO_NODE_PORT) )
+    ( INFO_NODE_RPC_USERNAME, INFO_NODE_RPC_PASSWORD, INFO_NODE_HOST, INFO_NODE_PORT) , timeout=10)
 
 # Customize to specific chain
 # Accepted metrics are [ 'version', 'protocolversion', 'walletversion', 'blocks' ]
 # Get in touch with us to expand the metrics list
-getinfo = connection.getinfo()
-#blockchaininfo = connection.getblockchaininfo()
-#walletinfo = connection.getwalletinfo()
+try:
+    getinfo = connection.getinfo()
+    #blockchaininfo = connection.getblockchaininfo()
+    #walletinfo = connection.getwalletinfo()
+except Exception as exception:
+    print("Could not connect to daemon: %s" % exception)
+    sys.exit(exception)
+
 stats['version'] = getinfo['version']
 stats['protocolversion'] = getinfo['protocolversion']
 stats['walletversion'] = getinfo['walletversion']
