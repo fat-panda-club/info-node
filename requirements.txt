@@ -1,2 +1,2 @@
 requests
-bitcoinrpc
+python-bitcoinrpc
