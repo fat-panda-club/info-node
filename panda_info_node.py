@@ -2,6 +2,7 @@ import random
 import time
 import requests
 from bitcoinrpc.authproxy import AuthServiceProxy
+import sys
 
 # This is the currency which you received API key for
 CURRENCY_TICKER = ""
