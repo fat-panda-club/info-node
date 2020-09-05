@@ -62,5 +62,7 @@ headers = {
 
 response = requests.request("POST", url, headers=headers, json=stats)
 
-assert response.status_code == 200
+if response.status_code != 200:
+    print(response.status_code)
+    print(response.text)
 assert response.json()['success']
