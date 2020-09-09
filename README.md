@@ -1,6 +1,6 @@
 # info-node
 
-Requires python3.7+
+Requires python3.7+ with pip
 
 ## Retrieve API key from panda-bot
 
