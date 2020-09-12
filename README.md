@@ -12,6 +12,8 @@ Run $infonode command in DM or any channel with panda-bot present
 cd ~
 git clone https://github.com/fat-panda-club/info-node.git
 cd info-node
+sudo apt-get install python3-pip -y
+sudo apt-get install python3-setuptools -y
 python3 -m pip install -r requirements.txt
 vi panda_info_node.py
 ```
